@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0dfe1cb584.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To Do</title>
+
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <select class="sidebar__work">
+          <option value="Company-1">
+            <!-- İcon ekleyemedim -->
+            <span><i class="fa-solid fa-list-check"></i>Company 1 </span>
+          </option>
+          <option value="Company-2">Company 2</option>
+          <option value="Company-3">Company 3</option>
+        </select>
+        <nav class="sidebar__navigator">
+          <ul class="navigator__section">
+            <li>
+              <a class="navigator__link" href="#">
+                <span> <i class="fa-solid fa-list-check"></i> Tasks</span>
+                <i class="fa-regular fa-square"></i
+              ></a>
+            </li>
+            <li>
+              <a class="navigator__link" href="#">
+                <span> <i class="fa-regular fa-bell"></i> Notifications</span>
+                <i class="fa-regular fa-square"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="navigator__link"
+                href="https://www.figma.com/file/h9rMxJwex8uR57GtLQqo4X/Clean-Kanban-Todo-(Community)?node-id=0%3A1"
+                ><span><i class="fa-solid fa-chart-pie"></i> Analytics</span>
+                <i class="fa-regular fa-square"></i
+              ></a>
+            </li>
+            <li>
+              <a class="navigator__link" href="#"
+                ><span> <i class="fa-solid fa-people-group"></i>Team</span>
+                <i class="fa-regular fa-square"></i
+              ></a>
+            </li>
+          </ul>
+          <!-- settings buton mu olmalı -->
+          <div class="settings">
+            <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+          </div>
+        </nav>
+      </div>
+      <div class="content">
+        <div class="add-item">
+          <button>Add Task <i class="fa-solid fa-circle-plus test"></i></button>
+          <button>Add Section <i class="fa-solid fa-circle-plus"></i></button>
+        </div>
+        <div class="content__box">
+          <div class="box__column">
+            <h2 class="column__title">TO DO</h2>
+            <div class="card">
+              <div class="card__header">
+                <div class="card__title">
+                  Make a Kanban App
+                  <!-- <i class="fa-regular fa-ellipsis-vertical"></i> KULLANAMADIM -->
+                </div>
+                <i class="fa-solid fa-wrench"></i>
+              </div>
+
+              <div class="card__info">
+                <div class="info__date">12th Jan</div>
+                <i class="fa-solid fa-circle"></i>
+                <div class="info__creator">Created by <b>Prahlad</b></div>
+              </div>
+              <div class="card__text">
+                Lorem ipsum dolor sit amet consectetur
+              </div>
+              <div class="card__img">
+                <img class="task-img" src="image/img1.png" alt="task image" />
+              </div>
+              <div class="card__connections">
+                <span
+                  ><a href=""
+                    ><i class="fa-solid fa-link"></i>docs.google</a
+                  ></span
+                >
+                <span
+                  ><a href=""
+                    ><i class="fa-solid fa-paperclip"></i>docs.google</a
+                  ></span
+                >
+              </div>
+              <div class="card__attribute">
+                <div class="attribute__label attribute__label--design">
+                  Design
+                </div>
+                <div class="attribute__label attribute__label--development">
+                  Development
+                </div>
+              </div>
+              <div class="card__footer">
+                <span><i class="fa-solid fa-message"></i> 3</span>
+                <span
+                  ><i class="fa-solid fa-user"></i
+                  ><i class="fa-solid fa-user"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
