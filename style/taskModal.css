@@ -1,0 +1,25 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+form > * {
+  font-size: 1.7rem;
+  border-radius: 1rem;
+}
+
+.addModal {
+  position: fixed;
+  display: none;
+  top: 30vh;
+  left: calc(50% - 25rem);
+  color: white;
+  padding: 2rem;
+  max-width: 50rem;
+  min-width: 50rem;
+  background-color: #98a2b3;
+  border-radius: 1rem;
+  opacity: 0.8;
+  z-index: 1;
+}
