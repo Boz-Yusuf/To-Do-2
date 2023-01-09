@@ -2,7 +2,6 @@ import { Section } from "./task.js";
 
 let addSectionButton = document.querySelector("#addSectionButton");
 let sectionName = document.querySelector("#sectionName");
-
 let sectionList = JSON.parse(localStorage.getItem("sectionList"));
 
 loadSections();

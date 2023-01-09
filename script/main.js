@@ -12,6 +12,22 @@ function openSectionModal() {
   sectionModal.style.display = "block";
 }
 
+// When the user clicks anywhere outside of the modal, close it
+// window.onclick = function (event) {
+//   if (event.target != taskModal) {
+//     console.log("olmayaydıı");
+//     taskModal.style.display = "none";
+//   }
+// };
+
+function hideTask() {
+  taskModal.style.display = "none";
+}
+
+function hideSection() {
+  sectionModal.style.display = "none";
+}
+
 //Sistemdeki section isimlerini task ekleme işlemi için getirmeyi sağlar
 function fillSections() {
   let sectionList = JSON.parse(localStorage.getItem("sectionList"));
@@ -25,21 +41,17 @@ function fillSections() {
 
 function fillTasks() {
   let sectionList = JSON.parse(localStorage.getItem("sectionList"));
-  console.log(sectionList);
-  sectionList.forEach((section) => {
-    console.log("section: ", section);
 
-    // console.log("section Element: ;", sectionElement);
+  sectionList.forEach((section) => {
     let taskList = JSON.parse(localStorage.getItem(section));
-    console.log(taskList);
+
     taskList.taskList.forEach((task) => {
-      console.log(task);
-      taskCard = document.createElement("div");
+      let taskCard = document.createElement("div");
       taskCard.classList = "card";
       taskCard.innerHTML = `
       <div class="card__header">
       <div class="card__title">
-        Make a Kanban App
+        ${task.taskName}
         <!-- <i class="fa-regular fa-ellipsis-vertical"></i> KULLANAMADIM -->
       </div>
       <i class="fa-solid fa-wrench"></i>
@@ -51,7 +63,7 @@ function fillTasks() {
       <div class="info__creator">Created by <b>Prahlad</b></div>
     </div>
     <div class="card__text">
-      Lorem ipsum dolor sit amet consectetur
+      ${task.taskInfo}
     </div>
     <div class="card__img">
       <img class="task-img" src="image/img1.png" alt="task image" />
@@ -97,8 +109,10 @@ function fillTasks() {
         onclick="msg()"
       />
     </div>`;
-
-      // sectionElement.append(taskCard);
+      document.addEventListener("DOMContentLoaded", () => {
+        let parentSection = document.getElementById(section);
+        parentSection.append(taskCard);
+      });
     });
   });
 }
